@@ -31,7 +31,7 @@ merged_data_tbl <- merged_data_tbl[,!duplicated(colnames(merged_data_tbl))]
 merged_data_tbl_p <- tbl_df(merged_data_tbl)
 rm("merged_data_tbl") #since we don't need the original merged data table anymore
 
-#extract only mean and std from the measurements - 86 columns have mean and std measurements
+#extract only mean and std from the measurements
 mean_std_only_tbl <- select(merged_data_tbl_p, contains("-mean"), contains("-std"), contains("Mean"))
 
 ### 3. Uses descriptive activity names to name the activities in the data set
@@ -69,5 +69,5 @@ tdy_tbl_avg_each_variable <- summarise_each(tidy_tbl_by_subject_activity,funs(me
 
 #write this data set
 print("Writing the data set 'avg_grouped_by_subject_activity.txt'...")
-write.table(tdy_tbl_avg_each_variable, "avg_grouped_by_subject_activity.txt")
+write.table(tdy_tbl_avg_each_variable, "avg_grouped_by_subject_activity.txt", row.names=FALSE)
 
