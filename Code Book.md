@@ -2,9 +2,8 @@
 title: "Code Book for Course Project"
 author: "Ramesh Subramanian"
 date: "Saturday, March 21, 2015"
-output: word_document
+output: html_document
 ---
-
 Source of the original data: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
@@ -36,7 +35,7 @@ tBodyAcc-max()-X
 8. y_test.txt: Activity ids (1:6) of activities corresponding to activity labels that the test population took part in. Data is in 2947 rows, 1 column.
 
 The output created is a tidy data table of 180 rows (30 subjects X 6 activities), and 88 columns. Column 1 is subject id (1:30), Column 2 is the activity (walking, walking upstairs, walking downstairs, sitting, standing, laying), columns 3..88 are averages of each variable for a subject and activity.
-Subject  Activity	tBodyAcc-mean()-X	tBodyAcc-mean()-Y	tBodyAcc-mean()-Z......
+Subject  Activity  tBodyAcc-mean()-X	tBodyAcc-mean()-Y	tBodyAcc-mean()-Z......
 1        laying	   0.2215982	      -0.040513953    	-0.11320355
 1        sitting  	0.2612376	      -0.001308288     	-0.10454418
 .......
